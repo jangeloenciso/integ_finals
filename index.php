@@ -15,9 +15,9 @@ $imgPath = "/static/images/"
             $name=$_SESSION['test_array'][$i]['name'];
             $description=$_SESSION['test_array'][$i]['description'];
             $image = $_SESSION['test_array'][$i]['image'];
-    ?>      
-        <input type="checkbox" name="items[]" value="<?php $name ?>">
-        <?php
+ 
+            echo '<input type="checkbox" name="items[]" value="'.$name.'">';
+        
             echo $name . " ";
             echo $description . " ";
             echo "<br>";
