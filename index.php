@@ -12,16 +12,17 @@ $imgPath = "/static/images/"
 <form action="cart.php" method="post">
     <?php 
         for($i = 0; $i <= $arrLength-1; $i++){
-            $name=$_SESSION['test_array'][$i]['name'];
-            $description=$_SESSION['test_array'][$i]['description'];
+            $name = $_SESSION['test_array'][$i]['name'];
+            $description = $_SESSION['test_array'][$i]['description'];
+            $price = $_SESSION['test_array'][$i]['price'];
             $image = $_SESSION['test_array'][$i]['image'];
             
 
-            echo "<br>";
-            echo "<br>";
+            echo "<br><br>";
             echo '<input type="checkbox" name="items[]" value="'.$name.'">';
             
             echo $name . "<br>";
+            echo $price . " PHP <br>";
             echo $description;
             echo "<br>";
             echo '<img src="'.$imgPath.$image.'" height="200">';
