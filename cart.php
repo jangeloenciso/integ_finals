@@ -1,6 +1,6 @@
 <?php
 $PageTitle="Shopping Cart";
-include_once('header.php'); 
+include_once('templates/header.php'); 
 include_once('items.php');
 
 $items = $_POST['items'];
@@ -16,5 +16,5 @@ for($i = 0; $i <= $arrLength-1; $i++){
 
 
 <?php
-include_once('footer.php');
+include_once('templates/footer.php');
 ?>

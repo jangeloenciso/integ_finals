@@ -1,6 +1,6 @@
 <?php
 $PageTitle="LaZhopee - Home";
-include_once('header.php'); 
+include_once('templates/header.php'); 
 include_once('items.php');
 
 $_SESSION['username'] = "ker";
@@ -15,11 +15,14 @@ $imgPath = "/static/images/"
             $name=$_SESSION['test_array'][$i]['name'];
             $description=$_SESSION['test_array'][$i]['description'];
             $image = $_SESSION['test_array'][$i]['image'];
- 
+            
+
+            echo "<br>";
+            echo "<br>";
             echo '<input type="checkbox" name="items[]" value="'.$name.'">';
-        
-            echo $name . " ";
-            echo $description . " ";
+            
+            echo $name . "<br>";
+            echo $description;
             echo "<br>";
             echo '<img src="'.$imgPath.$image.'" height="200">';
             }
@@ -30,5 +33,5 @@ $imgPath = "/static/images/"
 
 <?php
 
-include_once('footer.php');
+include_once('templates/footer.php');
 ?>
