@@ -23,12 +23,11 @@ $imgPath = "/static/images/"
             
             echo $name . "<br>";
             echo $price . " PHP <br>";
-            echo $description;
-            echo "<br>";
+            echo $description . "<br>";
             echo '<img src="'.$imgPath.$image.'" height="200">';
             }
         ?>
-
+        <br>
         <input type="submit" value="Submit">
 </form>
 
