@@ -14,6 +14,9 @@ for($i = 0; $i <= $arrLength-1; $i++){
 }
 ?>
 
+<form action="completed.php" method="post">
+    <input type="submit" value="Place Order">
+</form>
 
 <?php
 include_once('templates/footer.php');
