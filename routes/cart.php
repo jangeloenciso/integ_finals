@@ -14,7 +14,7 @@ for($i = 0; $i <= $arrLength-1; $i++){
     echo "<br>";
 }
 
-$total = $i * 300;
+$total = $i * 600;
 echo "Total: ₱" . $total;
 ?>
 

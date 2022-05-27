@@ -29,9 +29,7 @@ $imgPath = "/static/images/"
             
         ?>
         <br>
-        <input type="submit" value="Cart">
-
-        
+        <input type="submit" value="Cart">   
 </form>
 
 <?php
