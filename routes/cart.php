@@ -8,11 +8,14 @@ $arrLength = count($items);
 
 echo "CART";
 echo "<br>";
-print_r($items);
+
 for($i = 0; $i <= $arrLength-1; $i++){
     echo $items[$i];
     echo "<br>";
 }
+
+$total = $i * 300;
+echo "Total: ₱" . $total;
 ?>
 
 <form action="completed.php" method="post">

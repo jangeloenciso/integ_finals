@@ -1,6 +1,7 @@
 <?php
 $PageTitle="LaZhopee - Login";
 include_once('templates/header.php'); 
+include_once('functions/functions.php')
 
 ?>
 <h1>Login</h1>
@@ -10,6 +11,5 @@ include_once('templates/header.php');
 </form>
 
 <?php
-
 include_once('templates/footer.php');
 ?>

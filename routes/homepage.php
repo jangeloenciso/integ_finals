@@ -2,7 +2,7 @@
 $PageTitle="LaZhopee - Home";
 include_once('../templates/header.php'); 
 include_once('../functions/items.php');
-
+include_once('../functions/functions.php');
 
 $_SESSION['username'] = $_POST['username'];
 
@@ -10,11 +10,10 @@ $_SESSION['test_array'] = $array;
 $arrLength = count($array);
 $imgPath = "/static/images/"
 
-
 ?>
 
 <?php
-    echo "<h2>Welcome, " . $_SESSION['username'] . "</h2>"; 
+    welcomeMsg($_SESSION['username']);
 ?>
 
 <form action="cart.php" method="post">
@@ -24,22 +23,15 @@ $imgPath = "/static/images/"
             $description = $_SESSION['test_array'][$i]['description'];
             $price = $_SESSION['test_array'][$i]['price'];
             $image = $_SESSION['test_array'][$i]['image'];
-            $quantity = $_SESSION['test_array'][$i]['quantity'];
             
-
-            echo "<br><br>";
-            echo '<input type="checkbox" name="items[]" value="'.$name.'">';
-            
-            echo $name . "<br>";
-            echo $price . " PHP <br>";
-            echo $description . "<br>";
-            echo '<img src="'.$imgPath.$image.'" height="200">';
+            getItem($name, $price, $description, $imgPath, $image);
             }
+            
         ?>
         <br>
         <input type="submit" value="Cart">
 
-        <input type="number" step="0" min="0">
+        
 </form>
 
 <?php
