@@ -9,6 +9,8 @@ $_SESSION['username'] = $_POST['username'];
 $_SESSION['test_array'] = $array;
 $arrLength = count($array);
 $imgPath = "/static/images/"
+
+
 ?>
 
 <?php
@@ -22,6 +24,7 @@ $imgPath = "/static/images/"
             $description = $_SESSION['test_array'][$i]['description'];
             $price = $_SESSION['test_array'][$i]['price'];
             $image = $_SESSION['test_array'][$i]['image'];
+            $quantity = $_SESSION['test_array'][$i]['quantity'];
             
 
             echo "<br><br>";
@@ -35,9 +38,11 @@ $imgPath = "/static/images/"
         ?>
         <br>
         <input type="submit" value="Cart">
+
+        <input type="number" step="0" min="0">
 </form>
 
 <?php
 
-include_once('templates/footer.php');
+include_once('../templates/footer.php');
 ?>

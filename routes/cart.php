@@ -1,13 +1,14 @@
 <?php
 $PageTitle="Shopping Cart";
-include_once('templates/header.php'); 
-include_once('items.php');
+include_once('../templates/header.php'); 
+include_once('../functions/items.php');
 
 $items = $_POST['items'];
 $arrLength = count($items);
 
 echo "CART";
 echo "<br>";
+print_r($items);
 for($i = 0; $i <= $arrLength-1; $i++){
     echo $items[$i];
     echo "<br>";
@@ -19,5 +20,5 @@ for($i = 0; $i <= $arrLength-1; $i++){
 </form>
 
 <?php
-include_once('templates/footer.php');
+include_once('../templates/footer.php');
 ?>
